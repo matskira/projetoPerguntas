@@ -7,16 +7,17 @@ const app = express();
 app.set('view engine', 'ejs');
 
 
-app.get("/", (req,res) =>{
+app.get("/:nome/:lang", (req,res) =>{
     //render por padrão, olha sempre a pasta views (Por isso precisamos colocar os nossos HTML nessa pasta)
-    res.render("index");
+    var nome = req.params.nome;
+    var lang = req.params.lang;
+    res.render("index",{
+        nome: nome,
+        lang: lang,
+        empresa: "Guia do Programador!",
+        inscritos: 8000
+    });
 });
-
-app.get("/perfil", (req,res) =>{
-    //render por padrão, olha sempre a pasta views (Por isso precisamos colocar os nossos HTML nessa pasta)
-    res.render("principal/perfil");
-});
-
 
 app.listen(8080, ()=>{
     console.log("APP rodando!")
