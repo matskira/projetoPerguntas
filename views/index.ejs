@@ -21,5 +21,9 @@
         <h3>Deu tudo certo!</h3>
     <% } %> 
 
+    <h4>Minha lista de Produtos</h4>
+    <% produtos.forEach(function (produto) { %>
+        <ul><li>Produto: <%=produto.nome %> || Preço: R$<%=produto.preco %></li></ul>
+    <% }) %> 
 </body>
 </html>
