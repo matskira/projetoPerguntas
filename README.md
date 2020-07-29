@@ -26,9 +26,10 @@ Projeto de uma aplicação Web de perguntas e respostas ao estilo Yahoo Resposta
   
   ![EJS Logo](https://glatchdesign.com/wp-content/uploads/2016/04/eyecatch_160417.gif)
   ##### EJS (Embedded JavaScript Templating)
+  * Documentação: https://ejs.co/#docs
   * Serve para trabalharmos com arquivos HTML e CSS no NodeJS;
   * Motor de templates, sua função é desenhar o HTML em qualquer ponto da nossa aplicação;
   * Exemplo: Uma rota "/login", podemos mandar o EJS ir lá e desenhar o HTML nesse endpoint.
-  
+  * Podemos também usar JavaScript dentro do HTML;
   
   
