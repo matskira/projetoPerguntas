@@ -12,7 +12,10 @@ Projeto de uma aplicação Web de perguntas e respostas ao estilo Yahoo Resposta
    
   ![Express.js Logo](https://d2vs8yx90uvogk.cloudfront.net/2019/11/ExpressJS.png) 
   ##### Express.js
-  * Framework utilizado para criação do Back-End
+  * Framework utilizado para criação do Back-End;
+  * Para utilizarmos melhor o NodeJS, usaremos junto o body-parser;
+  * Body-parser é utilizado para pegar os dados de um formulário e converter para uma estrutura JavaScript que possibilite
+	utilizar no Back-End;
   
   
   
