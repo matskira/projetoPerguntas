@@ -32,4 +32,17 @@ Projeto de uma aplicação Web de perguntas e respostas ao estilo Yahoo Resposta
   * Exemplo: Uma rota "/login", podemos mandar o EJS ir lá e desenhar o HTML nesse endpoint.
   * Podemos também usar JavaScript dentro do HTML;
   
+  ![Bootstrap Logo](https://miro.medium.com/fit/c/1838/551/1*TJT7z7w3baYO0ON-6RbaYA.png)
+  ##### Bootstrap 4
+  * Serve para facilitar no desenvolvimento de estilo para a nossa aplicação web;
+  * Design responsivo, se adapta ao tamanho da tela;
+  * Para instalarmos:  https://getbootstrap.com/ -> Download -> Compiled CSS and JS
+  * Quando você coloca os arquivos do bootstrap no seu projeto, é preciso colocar as dependências do Jquery e do popper;
+  * Para achar o comando, basta ir na mesma página de Download -> BootstrapCDN
+  * No caso de quando o projeto foi feito:
+	```html  
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	```
+  
   

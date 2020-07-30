@@ -8,28 +8,9 @@ app.set('view engine', 'ejs');
 //Estou dizendo para o express, que a pasta public terá arquivos estáticos (CSS, imagens e etc)
 app.use(express.static('public'));
 
-app.get("/:nome/:lang", (req,res) =>{
+app.get("/", (req,res) =>{
     //render por padrão, olha sempre a pasta views (Por isso precisamos colocar os nossos HTML nessa pasta)
-    var nome = req.params.nome;
-    var lang = req.params.lang;
-    var exibirMsg = true;
-    var produtos = [
-        {nome: "Doritos", preco: 3.14},
-        {nome: "Coca-cola", preco: 1.45},
-        {nome:"Leite", preco: 1.10},
-        {nome:"Maçã", preco: 1.00},
-        {nome:"Monster", preco: 7.50}
-    ]
-
-
-    res.render("index",{
-        nome: nome,
-        lang: lang,
-        empresa: "Guia do Programador!",
-        inscritos: 8000,
-        msg: exibirMsg,
-        produtos: produtos
-    });
+    res.render("index");
 });
 
 app.listen(8080, ()=>{
