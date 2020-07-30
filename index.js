@@ -17,6 +17,11 @@ app.get("/perguntar", (req,res) =>{
     res.render("perguntar");
 });
 
+//Para receber dados de um formulário, usamos o 'POST'
+app.post("/salvar-pergunta", (req,res)=>{
+    res.send('Formulário recebido com sucesso!');
+});
+
 app.listen(8080, ()=>{
     console.log("APP rodando!")
 });
