@@ -9,17 +9,30 @@
 
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="/img/icone.png" alt="Logo Principal">
+        </a>
+    </nav>
+
     <div class="container" style="border: 1px solid red;">
-        <h3>Realizar Pergunta</h3>
-        <hr>
-        <form>
-            <label>Título</label>
-            <input type="text" placeholder="Título da Pergunta" class="form-control">
-            <br><label>Descrição</label>
-            <textarea placeholder="Descreva sua pergunta" class="form-control"></textarea>
-            <br>
-            <button class="btn btn-success">Confirmar</button>
-        </form>
+        
+        <div class="card" id="formulario-pergunta">
+            <div class="card-header">
+                <h3>Realizar Pergunta</h3>
+            </div>
+            <div class="card-body">  
+                <form>
+                    <label>Título</label>
+                    <input type="text" placeholder="Título da Pergunta" class="form-control">
+                    <br><label>Descrição</label>
+                    <textarea placeholder="Descreva sua pergunta" class="form-control"></textarea>
+                    <br>
+                    <button class="btn btn-success">Confirmar</button>
+                </form>
+            </div>
+        </div>
+        
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
