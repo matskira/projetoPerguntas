@@ -14,8 +14,6 @@ Projeto de uma aplicação Web de perguntas e respostas ao estilo Yahoo Resposta
   ##### Express.js
   * Framework utilizado para criação do Back-End;
   * Para utilizarmos melhor o NodeJS, usaremos junto o body-parser;
-  * Body-parser é utilizado para pegar os dados de um formulário e converter para uma estrutura JavaScript que possibilite
-	utilizar no Back-End;
   
   
   
@@ -47,5 +45,17 @@ Projeto de uma aplicação Web de perguntas e respostas ao estilo Yahoo Resposta
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	```
+  
+  ### Bibliotecas específicas
+  
+  ##### Body-parser
+  * Body-parser é utilizado para pegar os dados de um formulário e converter para uma estrutura JavaScript que possibilite
+	utilizar no Back-End;
+  
+  ##### Sequelize
+  * Utilizamos o Sequelize para nos conectarmos ao banco de dados MySQL;
+  * Realiza todos os processos através do NodeJS com JavaScript;
+  * Documentação: https://sequelize.org/
+  ![Instalações](/imgGit/cmdInstallSequelize.PNG)
   
   
