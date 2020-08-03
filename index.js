@@ -47,9 +47,18 @@ app.get("/pergunta/:id", (req,res)=>{
         where: {id:id}
     }).then(pergunta => {
         if (pergunta != undefined) { //pergunta achada
-            res.render("pergunta",{
-                pergunta:pergunta
+            Resposta.findAll({
+                raw:true,
+                where:{perguntaId:id},
+                order: [["id", "DESC"]]
+            }).then(respostas =>{
+                res.render("pergunta",{
+                    pergunta:pergunta,
+                    respostas:respostas
+                });
+
             });
+            
         }else{ //pergunta não encontrada
             res.redirect("/");
         }
@@ -71,6 +80,17 @@ app.post("/salvar-pergunta", (req,res)=>{
         descricao: descricao
     }).then(()=>{
         res.redirect("/")
+    });
+});
+
+app.post("/responder", (req,res)=>{
+    var corpo = req.body.corpo;
+    var perguntaId = req.body.pergunta;
+    Resposta.create({
+        corpo: corpo,
+        perguntaId: perguntaId
+    }).then(()=>{
+        res.redirect("/pergunta/"+perguntaId);
     });
 });
 
