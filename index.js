@@ -32,7 +32,12 @@ app.use(bodyParse.json());
 //Ínicio das rotas
 app.get("/", (req,res) =>{
     //render por padrão, olha sempre a pasta views (Por isso precisamos colocar os nossos HTML nessa pasta)
-    res.render("index");
+    //Obter as perguntas (raw serve para uma pesquisa crua, ou seja, apenas os dados)
+    Pergunta.findAll({raw:true}).then(perguntas=>{
+        res.render("index",{
+            perguntas:perguntas
+        });
+    });
 });
 
 app.get("/perguntar", (req,res) =>{
