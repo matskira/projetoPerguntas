@@ -1,7 +1,12 @@
 <%- include ('partials/header.ejs')%>
 <body>
     <%- include ('partials/navbar.ejs')%>
-    <h1>página da pergunta</h1>
+    <div class="container">
+        <hr>
+        <h1><%= pergunta.titulo %></h1>
+        <br>
+        <p><%= pergunta.descricao %></p>
+    </div>
     
 </body>
 <%- include ('partials/footer.ejs')%>
