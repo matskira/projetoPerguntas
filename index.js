@@ -40,6 +40,19 @@ app.get("/", (req,res) =>{
     });
 });
 
+app.get("/pergunta/:id", (req,res)=>{
+    var id = req.params.id
+    Pergunta.findOne({
+        where: {id:id}
+    }).then(pergunta => {
+        if (pergunta != undefined) { //pergunta achada
+            res.render("pergunta");
+        }else{ //pergunta não encontrada
+            res.redirect("/");
+        }
+    });
+});
+
 app.get("/perguntar", (req,res) =>{
     res.render("perguntar");
 });
