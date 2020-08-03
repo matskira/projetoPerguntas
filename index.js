@@ -33,7 +33,7 @@ app.use(bodyParse.json());
 app.get("/", (req,res) =>{
     //render por padrão, olha sempre a pasta views (Por isso precisamos colocar os nossos HTML nessa pasta)
     //Obter as perguntas (raw serve para uma pesquisa crua, ou seja, apenas os dados)
-    Pergunta.findAll({raw:true}).then(perguntas=>{
+    Pergunta.findAll({raw:true, order:[["id","DESC"]]}).then(perguntas=>{
         res.render("index",{
             perguntas:perguntas
         });
