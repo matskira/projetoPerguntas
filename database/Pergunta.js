@@ -1,6 +1,5 @@
 const Sequelize = require("sequelize")
 const connection = require("./database");
-const { Model } = require("sequelize");
 
 
 //Criando uma tabela
