@@ -57,5 +57,9 @@ Projeto de uma aplicação Web de perguntas e respostas ao estilo Yahoo Resposta
   * Realiza todos os processos através do NodeJS com JavaScript;
   * Documentação: https://sequelize.org/
   ![Instalações](/imgGit/cmdInstallSequelize.PNG)
+  * Caso aparece algum erro envolvendo a versão do MySQL, utilize o comando abaixo no MySQL workbench: (Só não esquecer de substituir os campos pelos seus dados)
+  ```sql
+  ALTER USER 'usuario'@'host' IDENTIFIED WITH mysql_native_password BY 'senha'
+  ```
   
   
