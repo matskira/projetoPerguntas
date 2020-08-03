@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize")
-const connection = require("./database")
+const connection = require("./database");
+const { Model } = require("sequelize");
 
 
 //Criando uma tabela
@@ -16,3 +17,4 @@ const Pergunta = connection.define("pergunta",{
 //O force serve para dizer que se tiver a tabela, ele não vai criar novamente
 Pergunta.sync({force: false}).then(()=>{console.log('Tabela criada com sucesso!')})
 
+module.exports = Pergunta;

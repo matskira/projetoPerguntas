@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const bodyParse = require("body-parser");
 const connection = require("./database/database");
-const perguntaModel = require("./database/Pergunta")
+const Pergunta = require("./database/Pergunta");
 
 //Database
 connection
@@ -14,8 +14,6 @@ connection
     .catch((msgErro) => {
         console.log(msgErro)
     });
-
-
 
 //Estou dizendo para o express, usar o EJS como View Engine
 app.set('view engine', 'ejs');
@@ -45,7 +43,14 @@ app.get("/perguntar", (req,res) =>{
 app.post("/salvar-pergunta", (req,res)=>{
     var titulo = req.body.titulo;
     var descricao = req.body.descricao;
-    res.send('Formulário recebido com sucesso! Título recebido: '+titulo+" <br>Descrição: " + descricao );
+    //res.send('Formulário recebido com sucesso! Título recebido: '+titulo+" <br>Descrição: " + descricao );
+    //Create salva na tabela instanciada
+    Pergunta.create({
+        titulo: titulo,
+        descricao: descricao
+    }).then(()=>{
+        res.redirect("/")
+    });
 });
 
 app.listen(8080, ()=>{
